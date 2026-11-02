@@ -1,0 +1,48 @@
+{
+  "name": "@hermeticacomms/sdk-cordova",
+  "version": "0.1.0",
+  "description": "Hermetica for Cordova: events, consent, FCM push tokens, in-app messages",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hermeticacomms/hermetica-cordova.git"
+  },
+  "homepage": "https://github.com/hermeticacomms/hermetica-cordova#readme",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "www",
+    "plugin.xml"
+  ],
+  "scripts": {
+    "build": "node build.mjs && tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hermeticacomms/sdk-browser": "^0.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "happy-dom": "^21.0.4",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "cordova": {
+    "id": "hermetica-cordova",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
