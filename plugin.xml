@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lets `cordova plugin add @hermeticacomms/sdk-cordova` expose the SDK as window.HermeticaCordova (built into www/ by build.mjs). -->
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="hermetica-cordova" version="0.1.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="hermetica-cordova" version="0.4.0">
   <name>Hermeticor</name>
   <description>Hermeticor SDK for Cordova: events, identity, consent, push tokens and in-app messages.</description>
   <license>MIT</license>

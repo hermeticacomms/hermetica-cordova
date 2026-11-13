@@ -1,6 +1,6 @@
 {
   "name": "@hermeticacomms/sdk-cordova",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Hermetica for Cordova: events, consent, FCM push tokens, in-app messages",
   "license": "MIT",
   "type": "module",
@@ -31,7 +31,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@hermeticacomms/sdk-browser": "^0.1.0"
+    "@hermeticacomms/sdk-browser": "^0.4.0"
   },
   "devDependencies": {
     "esbuild": "^0.28.2",
