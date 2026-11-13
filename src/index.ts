@@ -35,7 +35,7 @@ const whenReady = () => new Promise<void>((r) => {
 const ask = (f: (ok: (v: boolean) => void, fail: Fail) => void) => new Promise<boolean>((r) => f(r, () => r(false)));
 
 /**
- * Hermetica for Cordova: the browser SDK in the WebView (consent gate, batching, retries with one Idempotency-Key per batch), plus
+ * Hermeticor for Cordova: the browser SDK in the WebView (consent gate, batching, retries with one Idempotency-Key per batch), plus
  * the FCM token from cordova-plugin-firebasex, push open tracking, and in-app messages for ios / android. Resolves after `deviceready`.
  */
 export async function createCordovaClient(o: CordovaOptions): Promise<CordovaClient> {
