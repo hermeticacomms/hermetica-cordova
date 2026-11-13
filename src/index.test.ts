@@ -27,7 +27,7 @@ describe('createCordovaClient', () => {
     expect(url).toContain('/client/push-tokens');
     const a = JSON.parse(init.body as string).data.attributes;
     expect(a).toMatchObject({ token: 'fcm-1', vendor: 'fcm', platform: 'ios', enablement_status: 'AUTHORIZED' });
-    expect(a.device_metadata).toMatchObject({ device_model: 'iPhone15,2', os_version: '17.4', sdk_version: 'cordova-0.1' });
+    expect(a.device_metadata).toMatchObject({ device_model: 'iPhone15,2', os_version: '17.4', sdk_version: 'cordova-0.4.0' });
   });
 
   it('tracks tapped notifications as opens and the rest as deliveries', async () => {

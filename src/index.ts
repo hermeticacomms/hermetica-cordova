@@ -44,7 +44,7 @@ export async function createCordovaClient(o: CordovaOptions): Promise<CordovaCli
   const { firebase = g.FirebasePlugin, cordovaDevice = g.device, requestPushPermission = false, pushEnvironment = 'release', ...rest } = o;
   const platform = cordovaDevice?.platform.toLowerCase() === 'ios' ? 'ios' : 'android';
   const device = { ...(cordovaDevice?.model ? { deviceModel: cordovaDevice.model } : {}), osName: platform, ...(cordovaDevice?.version ? { osVersion: cordovaDevice.version } : {}), ...rest.device };
-  const hm = createHybridClient({ ...rest, platform, device, sdkVersion: 'cordova-0.1' });
+  const hm = createHybridClient({ ...rest, platform, device, sdkVersion: 'cordova-0.4.0' });
   let allowed = false;
   const send = (token: string | null) => {
     if (!token) return;
