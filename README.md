@@ -1,4 +1,4 @@
-# @hermeticacomms/sdk-cordova
+# @hermeticor/sdk-cordova
 
 Hermeticor for Cordova apps. The browser SDK runs unchanged in the WebView (consent gate, batching, retries with one
 `Idempotency-Key` per batch); this package adds the FCM token from
@@ -6,7 +6,7 @@ Hermeticor for Cordova apps. The browser SDK runs unchanged in the WebView (cons
 app's platform. Device details come from cordova-plugin-device.
 
 ```sh
-cordova plugin add cordova-plugin-firebasex cordova-plugin-device @hermeticacomms/sdk-cordova
+cordova plugin add cordova-plugin-firebasex cordova-plugin-device @hermeticor/sdk-cordova
 ```
 
 ```js

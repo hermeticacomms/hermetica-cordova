@@ -1,7 +1,7 @@
 /// <reference lib="dom" />
-import { createHybridClient, type AppPushToken, type HybridClient, type HybridOptions } from '@hermeticacomms/sdk-browser';
+import { createHybridClient, type AppPushToken, type HybridClient, type HybridOptions } from '@hermeticor/sdk-browser';
 
-export type { AppDevice, HybridClient, ProfileIds } from '@hermeticacomms/sdk-browser';
+export type { AppDevice, HybridClient, ProfileIds } from '@hermeticor/sdk-browser';
 
 type Fail = (e: unknown) => void;
 /** The slice of cordova-plugin-firebasex's `FirebasePlugin` used here. */
@@ -44,7 +44,7 @@ export async function createCordovaClient(o: CordovaOptions): Promise<CordovaCli
   const { firebase = g.FirebasePlugin, cordovaDevice = g.device, requestPushPermission = false, pushEnvironment = 'release', ...rest } = o;
   const platform = cordovaDevice?.platform.toLowerCase() === 'ios' ? 'ios' : 'android';
   const device = { ...(cordovaDevice?.model ? { deviceModel: cordovaDevice.model } : {}), osName: platform, ...(cordovaDevice?.version ? { osVersion: cordovaDevice.version } : {}), ...rest.device };
-  const hm = createHybridClient({ ...rest, platform, device, sdkVersion: 'cordova-0.4.0' });
+  const hm = createHybridClient({ ...rest, platform, device, sdkVersion: 'cordova-0.4.5' });
   let allowed = false;
   const send = (token: string | null) => {
     if (!token) return;
